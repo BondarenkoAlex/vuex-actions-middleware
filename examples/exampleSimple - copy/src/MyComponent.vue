@@ -14,7 +14,7 @@
     ACTION_FIRST,
     ACTION_SECOND
   } from './store/constants';
-  import { actionsMiddleware } from '../src/actionsMiddleware';
+  import { actionsMiddleware } from '../../src/index';
 
   import { mapActions } from 'vuex';
 

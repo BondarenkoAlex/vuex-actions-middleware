@@ -1,26 +1,26 @@
 'use strict'
 
-const merge = require('deep-assign')
-const webpack = require('webpack')
+const merge = require('deep-assign');
+const webpack = require('webpack');
 
-const options = require('./options')
-const base = require('./webpack.base.js')
+const options = require('./options');
+const base = require('./webpack.base.js');
 
 const config = merge(base, {
-  entry: options.paths.resolve('src/index.js'),
+  entry: options.paths.src.main,
 
   output: {
     filename: options.isProduction
       ? 'vuex-actions-middleware.min.js'
       : 'vuex-actions-middleware.js',
     path: options.paths.output.main,
-    library: 'VueSimpleSpinner',
+    library: 'VuexActionsMiddleware',
     libraryExport: 'default',
     libraryTarget: 'umd'
   },
 
-  plugins: []
-})
+  plugins: [],
+});
 
 // debug and production
 config.plugins = config.plugins.concat([
@@ -30,7 +30,7 @@ config.plugins = config.plugins.concat([
   new webpack.DefinePlugin({
     VERSION: JSON.stringify(options.version)
   })
-])
+]);
 
 if (options.isProduction) {
   // production only
@@ -49,4 +49,4 @@ if (options.isProduction) {
   ])
 }
 
-module.exports = config
+module.exports = config;

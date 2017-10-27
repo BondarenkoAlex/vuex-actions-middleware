@@ -10,12 +10,14 @@ module.exports = {
 
     src: {
       main: path.join(__dirname, '..', 'src'),
-      examples: path.join(__dirname, '..', 'examples-src')
+      exampleSimple: path.join(__dirname, '..', 'examples/exampleSimple/src'),
+      exampleAuth: path.join(__dirname, '..', 'examples/exampleAuth/src')
     },
 
     output: {
       main: path.join(__dirname, '..', 'dist'),
-      examples: path.join(__dirname, '..', 'examples')
+      exampleSimple: path.join(__dirname, '..', 'examples/exampleSimple/dist'),
+      exampleAuth: path.join(__dirname, '..', 'examples/exampleAuth/dist')
     },
 
     resolve(location) {

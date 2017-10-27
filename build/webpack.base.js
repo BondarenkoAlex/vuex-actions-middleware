@@ -1,7 +1,7 @@
 'use strict'
 
-const options = require('./options')
-const autoprefixer = require('autoprefixer')
+const options = require('./options');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   resolve: {
@@ -52,4 +52,4 @@ module.exports = {
     children: false,
     timings: true
   }
-}
+};

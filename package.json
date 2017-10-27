@@ -5,7 +5,8 @@
   "author": "Bondarenko Alexey <bondarenkoalexgit@mail.ru>",
   "main": "dist/vuex-actions-middleware.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.dev.js --open --inline --hot",
+    "dev:simple": "cross-env NODE_ENV=development EXAMPLE=simple webpack-dev-server --config ./build/webpack.dev.js --open --inline --hot",
+    "dev:auth": "cross-env NODE_ENV=development EXAMPLE=auth webpack-dev-server --config ./build/webpack.dev.js --open --inline --hot",
     "build:debug": "cross-env NODE_ENV=debug webpack --config build/webpack.dist.js",
     "build:release": "cross-env NODE_ENV=production webpack --config build/webpack.dist.js",
     "build:examples": "webpack --config build/webpack.examples.js",
@@ -37,6 +38,7 @@
     "autoprefixer": "^6.7.7",
     "babel-core": "^6.0.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-es2015-destructuring": "^6.19.0",
     "babel-plugin-transform-es2015-parameters": "^6.18.0",
     "babel-plugin-transform-object-rest-spread": "^6.19.0",
